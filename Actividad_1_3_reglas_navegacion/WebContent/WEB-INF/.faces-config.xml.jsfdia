@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
+   PATH="/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="conocido:#{usuario.conocerUsuario}:#holaConocido.xhtml"
+    NAME="output" PATH="/holaConocido.xhtml"
+    TARGET="rules:#holaConocido.xhtml"
+    TITLE="#{usuario.conocerUsuario}:conocido" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="noconocido:#{usuario.conocerUsuario}:#holaNoConocido.xhtml"
+    NAME="output1" PATH="/holaNoConocido.xhtml"
+    TARGET="rules:#holaNoConocido.xhtml"
+    TITLE="#{usuario.conocerUsuario}:noconocido" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#holaNoConocido.xhtml"
+  PATH="/holaNoConocido.xhtml" SHAPE="256,256,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#holaConocido.xhtml"
+  PATH="/holaConocido.xhtml" SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

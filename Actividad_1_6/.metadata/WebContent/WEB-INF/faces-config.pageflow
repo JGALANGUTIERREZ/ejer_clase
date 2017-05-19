@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14937599115546" configfile="/Actividad_1_6/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf14937600855587" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf14937600855588 pf14937600855599" inlinks="pf149376008555910" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="test.xhtml" id="pf149376008555911" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf149376008555912" inlinks="pf14937600855588" path="/test.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="mostrarinformacion.xhtml" id="pf149376008555913" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf149376008555910" inlinks="pf14937600855599 pf149376008555912" path="/mostrarinformacion.xhtml"/>
+  <links id="pf14937600855588" target="pf149376008555911" source="pf14937600855587" outcome="opinion"/>
+  <links id="pf14937600855599" target="pf149376008555913" source="pf14937600855587" outcome="mostrarinformacion"/>
+  <links id="pf149376008555910" target="pf14937600855587" source="pf149376008555913" outcome="volver"/>
+  <links id="pf149376008555912" target="pf149376008555913" source="pf149376008555911" outcome="mostrarinformacion"/>
+</pageflow:Pageflow>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+
+
+	<ui:composition template="./plantilla.xhtml">
+		<ui:define name="titulo">
+			<h:outputText value="Pagina de ornitologia"/>
+		</ui:define>
+		
+		<ui:define name="cabecera">
+			<h:outputText value="pagina oficial de la asociacion ornitologica de Lepe"/>
+		</ui:define>
+		
+		<ui:define name="contenido">
+			<h:outputText value="Articulo del día: "/>
+			<h:outputLink value="quebrantahuesos.xhtml" >La dieta del quebrantahuesos</h:outputLink>
+		</ui:define>
+		
+		<ui:define name="pie">
+			Asociacion ornitologica de Lepe. todos los derechos reservados.
+		</ui:define>
+		
+	</ui:composition>
+
+
+
+</html>

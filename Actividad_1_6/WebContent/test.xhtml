@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title><ui:insert name="title">Default title</ui:insert></title>
+</head>
+
+<body>
+
+	<h:form>
+		<h:outputText value="#{msjs.puntue}" styleClass="enfasis" />
+		<br />
+		<br />
+		<h:panelGrid columns="2" cellpadding="1" border="1" width="40%"
+			styleClass="contenidos">
+			<h:outputText value="#{msjs.presentacion}" />
+			<h:selectOneRadio styleClass="contenidos">
+				<f:selectItem itemValue="Pobre" itemLabel="#{msjs.pobre}" />
+				<f:selectItem itemValue="Media" itemLabel="#{msjs.media}" />
+				<f:selectItem itemValue="Buena" itemLabel="#{msjs.buena}" />
+				<f:selectItem itemValue="Excelente" itemLabel="#{msjs.excelente}" />
+			</h:selectOneRadio>
+			<h:outputText value="#{msjs.variedad}" />
+			<h:selectOneRadio styleClass="contenidos">
+				<f:selectItem itemValue="Pobre" itemLabel="#{msjs.pobre}" />
+				<f:selectItem itemValue="Media" itemLabel="#{msjs.media}" />
+				<f:selectItem itemValue="Buena" itemLabel="#{msjs.buena}" />
+				<f:selectItem itemValue="Excelente" itemLabel="Excelente" />
+			</h:selectOneRadio>
+			<h:outputText value="#{msjs.tipos}" />
+			<h:selectOneRadio styleClass="contenidos">
+				<f:selectItem itemValue="Pobre" itemLabel="#{msjs.pobre}" />
+				<f:selectItem itemValue="Media" itemLabel="#{msjs.media}" />
+				<f:selectItem itemValue="Buena" itemLabel="#{msjs.buena}" />
+				<f:selectItem itemValue="Excelente" itemLabel="#{msjs.excelente}" />
+			</h:selectOneRadio>
+			<h:outputText value="#{msjs.estructura}" />
+			<h:selectOneRadio styleClass="contenidos">
+				<f:selectItem itemValue="Pobre" itemLabel="#{msjs.pobre}" />
+				<f:selectItem itemValue="Media" itemLabel="#{msjs.media}" />
+				<f:selectItem itemValue="Buena" itemLabel="#{msjs.buena}" />
+				<f:selectItem itemValue="Excelente" itemLabel="#{msjs.excelente}" />
+			</h:selectOneRadio>
+		</h:panelGrid>
+		<br />
+		<br />
+		<h:commandButton value="#{msjs.terminar}" action="mostrarinformacion"
+			styleClass="botones" />
+	</h:form>
+
+</body>
+
+</html>

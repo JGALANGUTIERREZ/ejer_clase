@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title><ui:insert name="title">Default title</ui:insert></title>
+</head>
+
+<body>
+
+	<h:form>
+		<div>
+			<h:outputLabel for="nombre" value="${msjs.sal_nombre}" />
+			<h:inputText id="nombre" value="#{usuario.nombre}" />
+			<h:outputLabel for="email" value="${msjs.sal_correo}" />
+			<h:inputText id="email" value="#{usuario.email}">
+				<f:validator validatorId="validadorEmail" />
+			</h:inputText>
+		</div>
+		<div>
+			<h:outputLabel for="aficiones" value="${msjs.sal_aficiones}" />
+			<h:selectManyCheckbox id="aficiones" value="#{usuario.aficiones}">
+				<f:selectItems value="#{usuario.aficionesItems}" />
+			</h:selectManyCheckbox>
+			<h:selectOneRadio id="fumador" required="true"
+				value="#{usuario.fumador}">
+				<f:selectItems value="#{usuario.fumadorItems}" />
+			</h:selectOneRadio>
+			<h:outputText value="consultarfumador" />
+			<h:outputLink value="http://www.tabaco.com">${msjs.pincheaqui}</h:outputLink>
+			<br />
+			<h:outputLabel for="so" value="${msjs.seleccioneso}" />
+			<h:selectOneMenu id="so" required="false" value="#{usuario.so}">
+				<f:selectItems value="#{usuario.soItems}" />
+			</h:selectOneMenu>
+			<br />
+			<h:outputLabel for="comida" value="${msjs.seleccionecomida}" />
+			<h:selectManyListbox id="comida" required="false"
+				value="#{usuario.comidas}">
+				<f:selectItems value="#{usuario.comidasItems}" />
+			</h:selectManyListbox>
+			<br />
+			<h:outputLabel for="estado" value="${msjs.indiqueestado}" />
+			<h:selectOneListbox id="estado" required="false"
+				value="#{usuario.estado}">
+				<f:selectItems value="#{usuario.estadoItems}" />
+			</h:selectOneListbox>
+			<br />
+			<h:outputLabel for="lenguajes" value="${msjs.indiquelenguajes}" />
+			<h:selectManyListbox id="lenguajes" required="false"
+				value="#{usuario.lenguajes}">
+				<f:selectItems value="#{usuario.lenguajesItems}" />
+			</h:selectManyListbox>
+		</div>
+		<div>
+			<h:outputLabel for="comentario" value="${msjs.escribacomentario}" />
+			<h:inputTextarea id="comentario" value="#{usuario.comentario}" />
+		</div>
+		<div>
+			<h:commandButton type="submit" id="aceptar" value="${msjs.aceptar}"
+				action="${usuario.procesar}" />
+			<h:commandButton type="reset" id="reset" value="${msjs.reset}" />
+			<h:selectBooleanCheckbox id="deseoopinar"
+				value="#{usuario.deseoOpinar}" />
+			<h:outputLabel for="deseoopinar" value="${msjs.deseoopinar}" />
+		</div>
+	</h:form>
+
+</body>
+
+</html>

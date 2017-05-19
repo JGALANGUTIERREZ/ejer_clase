@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title><ui:insert name="title">Default title</ui:insert></title>
+<link rel="stylesheet" type="text/css" href="/faces/estilos.css" />
+<f:loadBundle basename="resources.textos.mensajes_es_ES" var="msjs" />
+</head>
+<h:body>
+	<h:form>
+		<h2>
+			<h:outputText value="#{msjs.conocido}" />
+		</h2>
+		<hr />
+		<h3>
+			<h:outputText value="#{msjs.bienvenida}" />
+			<h:outputText value="#{usuario.nombre}" />
+			<h:outputText value="Le gusta: " /> 
+			<h:outputText value="#{usuario.comida.toString()}" />
+			<h:outputText value="#{usuario.aficiones}"/>
+		</h3>
+		<h:link value="#{msjs.inicio}" outcome="index" />
+	</h:form>
+</h:body>
+
+</html>

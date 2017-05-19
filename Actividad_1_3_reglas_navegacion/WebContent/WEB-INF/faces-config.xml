@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	
+	<application>
+		<locale-config>
+			<default-locale>es_ES</default-locale>
+			<supported-locale>en_US</supported-locale>
+		</locale-config>
+		<resource-bundle>
+			<base-name>resources.textos.mensajes</base-name>
+			<var>msjs</var>
+		</resource-bundle>
+	</application>
+	<navigation-rule>
+		<display-name>DependeDelNombre</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuario.conocerUsuario}</from-action>
+			<from-outcome>conocido</from-outcome>
+			<to-view-id>/holaConocido.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{usuario.conocerUsuario}</from-action>
+			<from-outcome>noconocido</from-outcome>
+			<to-view-id>/holaNoConocido.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+</faces-config>

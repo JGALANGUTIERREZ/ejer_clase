@@ -1,0 +1,19 @@
+#tabla{
+	width: 270px;
+	border: 1px solid white;
+}
+#tabla th{
+	background-color: orange;
+}
+
+.par td{
+	background-color: lightblue;
+}
+.impar td{
+	background-color: #6896FF;
+}
+.subtitulo td{
+	text-align: center;
+	font-weight: bold;
+	background-color: orange;
+}

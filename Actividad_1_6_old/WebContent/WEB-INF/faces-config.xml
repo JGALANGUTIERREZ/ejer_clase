@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<application>
+		<resource-bundle>
+			<base-name>resources.idiomas.textos</base-name>
+			<var>msjs</var>
+		</resource-bundle>
+		<locale-config>
+			<default-locale>es_ES</default-locale>
+		</locale-config>
+	</application>
+	<navigation-rule>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>opinion</from-outcome>
+			<to-view-id>/opinion.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>mostrarinformacion</from-outcome>
+			<to-view-id>/mostrarinformacion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/mostrarinformacion.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>volver</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/test.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>mostrarinformacion</from-outcome>
+			<to-view-id>/mostrarinformacion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

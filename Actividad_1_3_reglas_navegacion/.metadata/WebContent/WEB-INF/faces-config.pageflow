@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14935802497260" configfile="/Actividad_1_3/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="DependeDelNombre" id="pf14942362026600" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14942362026601 pf14942364567867" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="holaConocido.xhtml" x="72" y="180" id="pf14942362026613" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14942362026601" path="/holaConocido.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="holaNoConocido.xhtml" id="pf14942364567868" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14942364567867" path="/holaNoConocido.xhtml"/>
+  <links id="pf14942362026601" target="pf14942362026613" source="pf14942362026600" outcome="conocido" fromaction="#{usuario.conocerUsuario}"/>
+  <links id="pf14942364567867" target="pf14942364567868" source="pf14942362026600" outcome="noconocido" fromaction="#{usuario.conocerUsuario}"/>
+</pageflow:Pageflow>
